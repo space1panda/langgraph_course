@@ -1,0 +1,6 @@
+*png
+.env
+*json
+*pyc
+*toml
+*lock
