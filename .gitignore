@@ -4,3 +4,6 @@
 *pyc
 *toml
 *lock
+*__pycache__/
+*mypy_cache/
+*vscode
