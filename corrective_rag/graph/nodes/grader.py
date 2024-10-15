@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 from graph.state import GraphState
 from langchain.schema import Document
 
-from corrective_rag.graph.chains.doc_grader import doc_grader
+from graph.chains.doc_grader import doc_grader
 
 
 def grade_documents(state: GraphState) -> Dict[str, Any]:

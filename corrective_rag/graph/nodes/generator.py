@@ -2,7 +2,7 @@ from typing import Any, Dict
 
 from graph.state import GraphState
 
-from corrective_rag.graph.chains.generation import generation_chain
+from graph.chains.generation import generation_chain
 
 
 def generate(state: GraphState) -> Dict[str, Any]:

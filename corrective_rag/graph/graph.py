@@ -1,10 +1,10 @@
 from dotenv import load_dotenv
 from langgraph.graph import END, StateGraph
 
-from corrective_rag.graph import consts
-from corrective_rag.graph.nodes import (generate, grade_documents, retrieve,
+from graph import consts
+from graph.nodes import (generate, grade_documents, retrieve,
                                         web_search)
-from corrective_rag.graph.state import GraphState
+from graph.state import GraphState
 
 load_dotenv()
 

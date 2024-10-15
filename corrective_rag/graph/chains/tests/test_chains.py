@@ -3,8 +3,8 @@ from typing import cast
 
 from ingestion import retriever
 
-from corrective_rag.graph.chains.doc_grader import GradeDocuments, doc_grader
-from corrective_rag.graph.chains.generation import generation_chain
+from graph.chains.doc_grader import GradeDocuments, doc_grader
+from graph.chains.generation import generation_chain
 
 DOC_GRADER_QUESTION_YES = "agent memory"
 DOC_GRADER_QUESTION_NO = "african kitchen"
