@@ -1,0 +1,23 @@
+{
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#cbe4cb"
+        }
+    ],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}"},
+    "flake8.args": [
+        "--ignore=E501"
+    ],
+    "mypy-type-checker.args": [
+        "--strict"
+    ],
+    "python.testing.pytestArgs": [
+        "--collect-only"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+
+}
