@@ -1,10 +1,10 @@
+from pprint import pprint
 from typing import cast
 
-from corrective_rag.graph.chains.doc_grader import GradeDocuments, doc_grader
 from ingestion import retriever
-from pprint import pprint
-from corrective_rag.graph.chains.generation import generation_chain
 
+from corrective_rag.graph.chains.doc_grader import GradeDocuments, doc_grader
+from corrective_rag.graph.chains.generation import generation_chain
 
 DOC_GRADER_QUESTION_YES = "agent memory"
 DOC_GRADER_QUESTION_NO = "african kitchen"
@@ -31,8 +31,7 @@ def test_doc_grader_no() -> None:
 
 def test_generation_chain() -> None:
     docs = retriever.invoke(DOC_GRADER_QUESTION_YES)
-    generation = generation_chain.invoke({
-        "context": docs,
-        "question": DOC_GRADER_QUESTION_YES
-    })
+    generation = generation_chain.invoke(
+        {"context": docs, "question": DOC_GRADER_QUESTION_YES}
+    )
     pprint(generation)

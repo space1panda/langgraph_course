@@ -1,8 +1,9 @@
 from typing import Any, Dict, List
 
-from corrective_rag.graph.chains.doc_grader import doc_grader
 from graph.state import GraphState
 from langchain.schema import Document
+
+from corrective_rag.graph.chains.doc_grader import doc_grader
 
 
 def grade_documents(state: GraphState) -> Dict[str, Any]:
@@ -24,9 +25,7 @@ def grade_documents(state: GraphState) -> Dict[str, Any]:
     filtered_docs = []
     web_search = False
     for d in documents:
-        score = doc_grader.invoke(
-            {"question": question, "document": d.page_content}
-        )
+        score = doc_grader.invoke({"question": question, "document": d.page_content})
         grade = score.score
         if grade.lower() == "yes":
             print("---GRADE: DOCUMENT RELEVANT---")
