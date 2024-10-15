@@ -11,9 +11,6 @@
     "flake8.args": [
         "--ignore=E501"
     ],
-    "mypy-type-checker.args": [
-        "--strict"
-    ],
     "python.testing.pytestArgs": [
         "--collect-only"
     ],
