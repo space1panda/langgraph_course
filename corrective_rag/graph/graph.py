@@ -1,15 +1,14 @@
 from dotenv import load_dotenv
+from graph import consts
+from graph.nodes import generate, grade_documents, retrieve, web_search
+from graph.state import GraphState
 from langgraph.graph import END, StateGraph
 
-from graph import consts
-from graph.nodes import (generate, grade_documents, retrieve,
-                                        web_search)
-from graph.state import GraphState
 
 load_dotenv()
 
 
-def web_gate(state: StateGraph):
+def web_gate(state: GraphState) -> str:
     if state["web_search"]:
         return consts.WEBSEARCH
     return consts.GENERATE
