@@ -1,12 +1,12 @@
 from dotenv import load_dotenv
-from graph import consts
-from graph.nodes import generate, grade_documents, retrieve, web_search
-from graph.state import GraphState
 from langgraph.graph import END, StateGraph
-from graph.chains.hallucination_grader import hallucination_grader
-from graph.chains.answer_grader import answer_grader
-from graph.chains.router import RouteQuery, question_router
 
+from . import consts
+from .chains.answer_grader import answer_grader
+from .chains.hallucination_grader import hallucination_grader
+from .chains.router import RouteQuery, question_router
+from .nodes import generate, grade_documents, retrieve, web_search
+from .state import GraphState
 
 load_dotenv()
 
@@ -63,7 +63,6 @@ flow.add_node(consts.GENERATE, generate)
 flow.add_node(consts.GRADE_DOCUMENTS, grade_documents)
 flow.add_node(consts.RETRIEVE, retrieve)
 flow.add_node(consts.WEBSEARCH, web_search)
-# flow.set_entry_point(consts.RETRIEVE)
 flow.set_conditional_entry_point(route_question, {consts.WEBSEARCH: consts.WEBSEARCH, consts.RETRIEVE: consts.RETRIEVE})
 
 # Add edges

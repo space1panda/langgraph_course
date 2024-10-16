@@ -1,9 +1,10 @@
 from typing import Any, Dict
 
 from dotenv import load_dotenv
-from graph.state import GraphState
 from langchain.schema import Document
 from langchain_community.tools.tavily_search import TavilySearchResults
+
+from ..state import GraphState
 
 load_dotenv()
 

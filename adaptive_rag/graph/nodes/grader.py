@@ -1,8 +1,9 @@
 from typing import Any, Dict, List
 
-from graph.chains.doc_grader import doc_grader
-from graph.state import GraphState
 from langchain.schema import Document
+
+from ..chains.doc_grader import doc_grader
+from ..state import GraphState
 
 
 def grade_documents(state: GraphState) -> Dict[str, Any]:

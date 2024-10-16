@@ -3,7 +3,8 @@ from typing import cast
 
 from graph.chains.doc_grader import GradeDocuments, doc_grader
 from graph.chains.generation import generation_chain
-from graph.chains.hallucination_grader import hallucination_grader, GradeHallucinations
+from graph.chains.hallucination_grader import (GradeHallucinations,
+                                               hallucination_grader)
 from ingestion import retriever
 
 DOC_GRADER_QUESTION_YES = "agent memory"
